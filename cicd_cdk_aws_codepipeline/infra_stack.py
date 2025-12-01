@@ -7,8 +7,8 @@ from aws_cdk import (
 )
 from constructs import Construct
 
-class Rb8903530InfraStack(Stack):
 
+class Rb8903530InfraStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
@@ -41,6 +41,7 @@ class Rb8903530InfraStack(Stack):
             environment={
                 "TABLE_NAME": table.table_name,
                 "BUCKET_NAME": bucket.bucket_name,
+                "APP_VERSION": "rb8903530-v1",
             },
         )
 

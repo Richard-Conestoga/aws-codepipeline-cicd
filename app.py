@@ -13,7 +13,7 @@ Rb8903530PipelineStack(
     repo_owner="Richard-Conestoga",
     repo_name="aws-codepipeline-cicd",
     branch="main",
-    connection_arn="arn:aws:codestar-connections:us-east-1:349070XXXXXX:connection/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+    connection_arn="arn:aws:codestar-connections:us-east-1:349070XXXXXX:connection/XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
 )
 
 app.synth()
