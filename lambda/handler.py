@@ -10,7 +10,7 @@ def main(event, context):
         "statusCode": 200,
         "body": json.dumps(
             {
-                "message": "Hello from Lambda!",
+                "message": "Hello from Lambda via CI/CD!",
                 "table": TABLE_NAME,
                 "bucket": BUCKET_NAME,
             }
