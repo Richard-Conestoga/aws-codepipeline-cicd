@@ -3,12 +3,15 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo "Installing CDK and Python dependencies"
       - npm install -g aws-cdk
       - python -m venv .venv
       - source .venv/bin/activate
       - pip install -r requirements.txt
+
   build:
     commands:
+      - echo "Synthesizing and deploying CDK stack"
       - source .venv/bin/activate
       - cdk synth
       - cdk deploy --require-approval never
