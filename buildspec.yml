@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - python -m pip install --upgrade pip
+      - pip install -r requirements.txt
+      - npm install -g aws-cdk
+  build:
+    commands:
+      - cdk synth
+      - cdk deploy Rb8903530InfraStack --require-approval never
