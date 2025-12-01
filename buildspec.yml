@@ -3,10 +3,16 @@ version: 0.2
 phases:
   install:
     commands:
-      - python -m pip install --upgrade pip
-      - pip install -r requirements.txt
       - npm install -g aws-cdk
+      - python -m venv .venv
+      - source .venv/bin/activate
+      - pip install -r requirements.txt
   build:
     commands:
+      - source .venv/bin/activate
       - cdk synth
-      - cdk deploy Rb8903530InfraStack --require-approval never
+      - cdk deploy --require-approval never
+
+artifacts:
+  files:
+    - '**/*'
